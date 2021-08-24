@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script src="https://kit.fontawesome.com/935b67cf83.js" crossorigin="anonymous"></script>
+
+    <script src="JS.js"></script> <!-- used to link to javascript-->
+
+    
+
+    <title>yo</title>
+</head>
+
+
+<body>
+
+
+
+    <section class="flex" id="portfolio">
+
+        <h1>
+            PROJECTS
+            <!--- <div class="horizontalLine" </div> --->
+        </h1>
+
+
+
+        <div class="gallery">
+
+            <div class="projectBox">
+                <img src="images/merseyTrains.png" />
+                <div class="span">
+                    <p1>MerseyTrainsLive</p1>
+                    <p2>Android/Java</p2>
+
+                    <button class="modal-open" data-target="#trainModal">Open Modal 1</button>
+                    <!--- <a class="btn" id="TrainBtn" href="#">LEARN MORE</a>
+                        --->
+
+                </div>
+            </div>
+
+
+            <div class="projectBox">
+                <img src="images/merseyTrains.png" />
+                <div class="span">
+                    <p1>MerseyTrainsLive</p1>
+                    <p2>Android/Java</p2>
+
+                    <button class="modal-open" data-target="#project2Modal">Open Modal 2</button>
+
+                    <!---
+                    <a class="btn" id="Project2Btn" href="#">LEARN MORE</a> --->
+                </div>
+            </div>
+
+
+            <div class="projectBox">
+                <img src="images/merseyTrains.png" />
+                <div class="span">
+                    <p1>MerseyTrainsLive</p1>
+                    <p2>Android/Java</p2>
+
+                    <button class="modal-open" data-target="#project3Modal">Open Modal 3</button>
+
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+    <!--pop-ups, bg-modal means background-->
+    <div class="modal" id="trainModal">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                
+                <h2>MerseyTrainsLive</h2>
+
+
+                <button class="modal-close" data-target="#trainModal">
+                    &times;
+                </button>
+
+
+            </div>
+
+            <div class="modal-body">
+                <img src="images/merseyTrains.png" />
+                <p> idem espum </p>
+
+            </div>
+
+            <div class="modal-footer">
+                 
+                <!--- change href to be the git repository for the project ---> 
+                <a link href="#"> 
+                    <i class="fab fa-github"></i>
+                </a>
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal" id="project2Modal">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h2>Project 2</h2>
+
+                <button class="modal-close" data-target="#project2Modal">
+                    &times;
+                </button>
+
+
+
+            </div>
+
+            <div class="modal-body">
+                <img src="images/merseyTrains.png" />
+                <p> idem espum 2 </p>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <!--- change href to be the git repository for the project ---> 
+                <a link href="#"> 
+                    <i class="fab fa-github"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal" id="project3Modal">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+
+                
+                <h2>Project 3</h2>
+
+
+                <button class="modal-close" data-target="#project3Modal">
+                    &times;
+                </button>
+
+
+            </div>
+
+            <div class="modal-body">
+                <img src="images/merseyTrains.png" />
+                <p> idem espum 3  </p>
+
+            </div>
+
+            <div class="modal-footer">
+                
+                <!--- change href to be the git repository for the project ---> 
+                <a link href="#"> 
+                    <i class="fab fa-github"></i>
+                </a>
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="overlay"> </div>
+
+
+
+</body>
+
+
+</html>

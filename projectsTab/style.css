@@ -1,0 +1,209 @@
+﻿
+h1 {
+    font-size: 40px; 
+    text-align: center;
+
+}
+
+.horizontalLine {
+    border-top: 5px solid black;
+    width: 100px;
+    margin: auto
+
+}
+
+
+.gallery {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center; /*makes individual boxes centered*/
+}
+.gallery img {
+    height: 300px;
+    width: 300px; 
+}
+
+.gallery .projectBox {
+    width: 300px;
+    position: relative;
+    display: inline-block;
+    /*margin: 10px; /*can be used to make the photos spaced out*/
+}
+
+
+.gallery .projectBox img {
+    width: 100%;
+    border: 4px solid black;
+    transition-duration: 0.5s;
+    opacity: 1; 
+}
+
+/*when hover over image, the image disappears*/
+.gallery .projectBox:hover img {
+    opacity: 0;
+}
+
+.gallery .projectBox .span {
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+
+}
+
+.gallery .projectBox .span p1 {
+    margin: auto;
+    font-size: 24px;
+    line-height: 40px;
+    padding: 20px;
+}
+
+.gallery .projectBox .span p2 {
+    margin: auto;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.gallery .projectBox:hover .span {
+    opacity: 1; 
+    display: block;
+
+}
+
+
+.gallery .projectBox .span a {
+    
+    text-decoration: none;
+}
+
+
+/*modal open buttons*/
+.gallery .projectBox .span .modal-open {
+    display: flex; /*makes layout nice :) */
+    width: 150px;
+    padding: 10px; /*how far the lines of button are from text*/
+    margin: 30px auto;
+    color: black;
+    font-size: 20px;
+    outline: none;
+    border: 2px solid #f44336;
+    background: transparent;
+    cursor: pointer;
+}
+
+.gallery .projectBox .span .modal-open:hover {
+    color: white;
+    background: #f44336;
+}
+
+
+/* popups */
+.modal {
+
+    width: 60%;
+    height: 60%;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 2; /*so appears on top of overlay*/
+    text-align: center;
+    background-color: white;
+    display: absolute; /*change to none  change back to none change back to none change back to none*/
+    
+}
+
+
+.modal.active {
+    
+    display: flex; 
+    
+}
+
+.modal .modal-content {
+    
+    border-radius: 4px;
+    position: relative; /*lets the .close position itself according to content*/
+    text-align: center;
+}
+
+/*header for modal*/
+.modal .modal-content .modal-header {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    left: 50%;
+    padding: 0.5rem 1rem;
+    
+}
+
+.modal .modal-content .modal-header h2 {
+    text-decoration: underline;
+}
+
+
+.modal .modal-body {
+    height: 80%;
+}
+
+/*image for top of modal*/
+.modal .modal-content img {
+    height: 100px;
+    width: 100px;
+    padding: 30px;
+    
+}
+
+
+/*modal close close button*/
+.modal .modal-header .modal-close {
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    padding-left: 40%;
+}
+
+
+
+.modal .modal-content .modal-footer{
+    height: 60px; 
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+.modal .modal-content .modal-footer a .fab{
+    color: black;
+    position: absolute; 
+    right: 15px;
+    bottom: 15px;
+    font-size: 30px; /*this dictates the size of the icon*/
+}
+
+.modal .modal-content .modal-footer a .fab:hover {
+    color:#f44336;
+}
+
+#overlay {
+    /*z-index: 1;*/ z-index: 1;
+    display: flex; /*change back to none change back to none change back to none change back to none*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+#overlay.active {
+    display: block;
+}
+
