@@ -6,7 +6,7 @@
 
     <script src="https://kit.fontawesome.com/935b67cf83.js" crossorigin="anonymous"></script>
 
-    <script src="JS.js"></script> <!-- used to link to javascript-->
+    
 
     
 
@@ -71,7 +71,7 @@
 
             </div>
 
-
+             
 
         </div>
 
@@ -83,11 +83,11 @@
     <!--pop-ups, bg-modal means background-->
     <div class="modal" id="trainModal">
         <div class="modal-content">
+            
             <div class="modal-header">
 
                 
                 <h2>MerseyTrainsLive</h2>
-
 
                 <button class="modal-close" data-target="#trainModal">
                     &times;
@@ -96,27 +96,76 @@
 
             </div>
 
-            <div class="modal-body">
-                <img src="images/merseyTrains.png" />
-                <p> idem espum </p>
+            <div class="modal-slideImg">
+                
+
+                <input type="radio" id="i1" name="images" checked />
+                <input type="radio" id="i2" name="images" />
+                <input type="radio" id="i3" name="images" />
+
+
+                <div class="slide_img" id="one">			
+			
+                    <img src="http://www.bhmpics.com/wallpapers/little_pony_art-800x480.jpg">
+                    
+                        <label class="prev" for="i3"><span>&#x2039;</span></label>
+                        <label class="next" for="i2"><span>&#x203a;</span></label>	
+                
+                </div>
+                
+                <div class="slide_img" id="two">
+                    
+                        <img src="https://preview.ibb.co/e5OShF/cropped_800_480_111290.jpg " >
+                        
+                            <label class="prev" for="i1"><span>&#x2039;</span></label>
+                            <label class="next" for="i3"><span>&#x203a;</span></label>
+                    
+                </div>
+                        
+                <div class="slide_img" id="three">
+                        <img src="http://wallpaperswide.com/download/up_house-wallpaper-1280x800.jpg">	
+                        
+                            <label class="prev" for="i2"><span>&#x2039;</span></label>
+                            <label class="next" for="i1"><span>&#x203a;</span></label>
+                </div>
+
+                <div id="nav_slide">
+                    <label for="i1" class="dots" id="dot1"></label>
+                    <label for="i2" class="dots" id="dot2"></label>
+                    <label for="i3" class="dots" id="dot3"></label>
+                </div>
+
 
             </div>
 
+
+            
             <div class="modal-footer">
                  
-                <!--- change href to be the git repository for the project ---> 
-                <a link href="#"> 
+                <!--- google slides for project ---> 
+                <a link href="https://docs.google.com/presentation/d/1y5h-vfvUaLdy8NCsjjkIqwD47NtZ_nLodaL-_Tcn7eE/edit#slide=id.p
+                " target="_blank"> 
+                    <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <!--- target=blank so it opens in new tab ---> 
+                <!--- github for project ---> 
+                <a link href="https://github.com/KaneLindsay/MerseyTrainsLive" target="_blank"> 
                     <i class="fab fa-github"></i>
                 </a>
                 
+                
 
             </div>
+
+
 
         </div>
 
     </div>
 
 
+    <!----------------------------- modal 2  --------------------------------> 
     <div class="modal" id="project2Modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -149,6 +198,8 @@
         </div>
 
     </div>
+
+     <!----------------------------- modal 3  --------------------------------> 
 
     <div class="modal" id="project3Modal">
         <div class="modal-content">
@@ -186,10 +237,12 @@
 
     </div>
 
+    
 
     <div id="overlay"> </div>
 
 
+    <script src="JS.js"></script> <!-- used to link to javascript-->
 
 </body>
 

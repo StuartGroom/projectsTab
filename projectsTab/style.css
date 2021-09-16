@@ -1,4 +1,8 @@
-﻿
+﻿body, html{
+    overflow-X: hidden;
+}
+
+
 h1 {
     font-size: 40px; 
     text-align: center;
@@ -77,7 +81,6 @@ h1 {
 
 
 .gallery .projectBox .span a {
-    
     text-decoration: none;
 }
 
@@ -102,7 +105,10 @@ h1 {
 }
 
 
-/* popups */
+/* -------------------------------------------------------------------------------- */
+/*                                   modal                                          */
+/* -------------------------------------------------------------------------------- */
+
 .modal {
 
     width: 60%;
@@ -116,43 +122,164 @@ h1 {
     z-index: 2; /*so appears on top of overlay*/
     text-align: center;
     background-color: white;
-    display: absolute; /*change to none  change back to none change back to none change back to none*/
+    display: none; /*change to none  change back to none change back to none change back to none*/
     
 }
 
 
 .modal.active {
-    
     display: flex; 
-    
 }
 
 .modal .modal-content {
-    
     border-radius: 4px;
-    position: relative; /*lets the .close position itself according to content*/
     text-align: center;
+    
+   /* position: relative; */
+
 }
 
 /*header for modal*/
 .modal .modal-content .modal-header {
+
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    justify-content: flex-end;
-    left: 50%;
     padding: 0.5rem 1rem;
-    
 }
 
 .modal .modal-content .modal-header h2 {
     text-decoration: underline;
 }
 
+/* -------------------------------------------------------------------------------- */
+/*                              image scroller                                      */
+/* -------------------------------------------------------------------------------- */
 
-.modal .modal-body {
+.modal .modal-content .modal-slideImg .slide_img{
+    position: absolute;
+    width: 100%;
     height: 80%;
+    
 }
+
+input[type="radio"] { display: none; }  /* hides the inbuilt radio buttons (img selector circles) */
+
+.modal .modal-content .modal-slideImg .slide_img img{
+    height: inherit;
+    width: inherit;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.prev, .next{
+    width: 12%;
+    height: inherit;
+    position: absolute;
+    top:0; 
+    background-color: rgba(88, 88, 88,.2);
+    color:rgba(244, 244, 244,.9);
+    z-index: 99;
+    transition: .45s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.next{right:0;}
+.prev{left:0;}
+
+label span{
+    position: absolute;
+    font-size: 100pt;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev:hover, .next:hover{
+    transition: .3s;
+    background-color: rgba(88, 88, 89,.8);
+    color: #ffffff; 
+}
+
+.modal-slideImg #nav_slide{
+width: 100%;
+bottom: 12%;
+height: 11px;
+position: absolute;
+text-align: center;
+z-index: 99;
+cursor: default;
+
+}
+
+#nav_slide .dots{
+top: -5px;
+width: 18px;
+height: 18px;
+margin: 0 4px;
+position: relative;
+border-radius: 100%;
+display: inline-block;
+background-color: rgba(180, 178, 178, 0.9);
+transition: .4s;
+}
+
+#nav_slide .dots:hover {
+cursor: pointer;
+background-color: rgba(88, 88, 89,.8);
+transition: .25s
+}
+
+.slide_img{
+    z-index: -1;
+}
+
+#i1:checked ~ #one  ,
+#i2:checked ~ #two  ,
+#i3:checked ~ #three
+{z-index: 9; animation: scroll 1s ease-in-out;}
+
+#i1:checked  ~  #nav_slide #dot1,
+#i2:checked  ~  #nav_slide #dot2,
+#i3:checked  ~  #nav_slide #dot3
+{ background-color: #f44336;}
+
+
+
+@keyframes scroll{
+    0%{	opacity:.4;}
+    100%{opacity:1;}
+}		
+
+@media screen and (max-width: 685px){  /* scales size of sidescroller bars */ 
+    .modal-slideImg{
+        border: none;
+        width: 100%;
+        height: 0;
+        padding-bottom: 55%; 
+    }	
+
+    label span { font-size: 50pt; }
+
+    .prev, .next{
+        width: 15%;
+    }	
+    #nav_slide .dots{
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media screen  and(min-width: 970px){
+    .me{ display: none;}
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/*                                     imagescroller end                            */
+/* -------------------------------------------------------------------------------- */
+
+
 
 /*image for top of modal*/
 .modal .modal-content img {
@@ -180,6 +307,11 @@ h1 {
     position: fixed;
 }
 
+/*--------------------------------------------------------------
+could optimise this to have only 1 for each icon (not duplicated) 
++ not hardcoding the position of icons (4 below) 
+-----------------------------------------------------------------*/
+
 .modal .modal-content .modal-footer a .fab{
     color: black;
     position: absolute; 
@@ -188,13 +320,27 @@ h1 {
     font-size: 30px; /*this dictates the size of the icon*/
 }
 
+.modal .modal-content .modal-footer a .fas{
+    color: black;
+    position: absolute; 
+    right: 60px;
+    bottom: 15px;
+    font-size: 30px; /*this dictates the size of the icon*/
+}
+
+.modal .modal-content .modal-footer a .fas:hover {
+    color:#f44336;
+}
+
 .modal .modal-content .modal-footer a .fab:hover {
     color:#f44336;
 }
 
+
+
 #overlay {
     /*z-index: 1;*/ z-index: 1;
-    display: flex; /*change back to none change back to none change back to none change back to none*/
+    display: none; /*change back to none change back to none change back to none change back to none*/
     position: fixed;
     top: 0;
     left: 0;
@@ -207,3 +353,6 @@ h1 {
     display: block;
 }
 
+/* -------------------------------------------------------------------------------- */
+/*                                     modal end                                    */
+/* -------------------------------------------------------------------------------- */
