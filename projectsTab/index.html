@@ -44,10 +44,11 @@
 
 
             <div class="projectBox">
-                <img src="images/merseyTrains.png" />
+                <img src="images/sortingAlgVisualisor.PNG" />
                 <div class="span">
                     <p1>Sorting Algorithm Visualiser</p1>
-                    <p2>Python</p2>
+                    
+                    <p2><br>Python</p2>
 
                     <button class="modal-open" data-target="#project2Modal">Open Modal 2</button>
 
@@ -186,32 +187,86 @@
 
     </div>
 
-
     <!----------------------------- modal 2  --------------------------------> 
+    <!----------------------------- modal 2  --------------------------------> 
+    <!----------------------------- modal 2  --------------------------------> 
+
     <div class="modal" id="project2Modal">
         <div class="modal-content">
             <div class="modal-header">
 
-                <h2>Project 2</h2>
+                <h2>SortingAlgoritmVisualiser</h2>
 
                 <button class="modal-close" data-target="#project2Modal">
                     &times;
                 </button>
-
-
-
             </div>
 
-            <div class="modal-body">
-                <img src="images/merseyTrains.png" />
-                <p> idem espum 2 </p>
+
+
+            <div class="modal-slideImg">
+                
+                <input type="radio" id="i1_" name="images" checked />
+                <input type="radio" id="i2_" name="images" />
+                <input type="radio" id="i3_" name="images" />
+                <input type="radio" id="i4_" name="images" />
+                <input type="radio" id="i5_" name="images" />	
+
+
+                <div class="slide_img" id="one_">			
+			
+                    <img src="images/SortingSlide1.PNG">
+                    
+                        <label class="prev" for="i5_"><span>&#x2039;</span></label>
+                        <label class="next" for="i2_"><span>&#x203a;</span></label>	
+                
+                </div>
+                
+                <div class="slide_img" id="two_">
+                    
+                        <img src="images/sortingSlide2.PNG" >
+                        
+                            <label class="prev" for="i1_"><span>&#x2039;</span></label>
+                            <label class="next" for="i3_"><span>&#x203a;</span></label>
+                    
+                </div>
+                        
+                <div class="slide_img" id="three_">
+                        <img src="images/sortingSlide3.PNG">	
+                        
+                            <label class="prev" for="i2_"><span>&#x2039;</span></label>
+                            <label class="next" for="i4_"><span>&#x203a;</span></label>
+                </div>
+
+                <div class="slide_img" id="four_">
+                    <img src="images/sortingSlide4.PNG">	
+                    
+                        <label class="prev" for="i3_"><span>&#x2039;</span></label>
+                        <label class="next" for="i5_"><span>&#x203a;</span></label>
+                </div>
+
+                <div class="slide_img" id="five_">
+                    <img src="images/sortingSlide5.PNG">	
+                    
+                        <label class="prev" for="i4_"><span>&#x2039;</span></label>
+                        <label class="next" for="i1_"><span>&#x203a;</span></label>
+                </div>
+
+                <div id="nav_slide">
+                    <label for="i1_" class="dots" id="dot1_"></label>
+                    <label for="i2_" class="dots" id="dot2_"></label>
+                    <label for="i3_" class="dots" id="dot3_"></label>
+                    <label for="i4_" class="dots" id="dot4_"></label>
+                    <label for="i5_" class="dots" id="dot5_"></label>
+                </div>
+
 
             </div>
 
             <div class="modal-footer">
 
                 <!--- change href to be the git repository for the project ---> 
-                <a link href="#"> 
+                <a link href="https://github.com/StuartGroom/Sorting-Algoritm-Visualiser" target="_blank"> 
                     <i class="fab fa-github"></i>
                 </a>
 

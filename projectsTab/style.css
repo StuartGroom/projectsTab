@@ -143,25 +143,29 @@ h1 {
 /*header for modal*/
 .modal .modal-content .modal-header {
 
+    display: flex;
+    justify-content: space-around;
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    padding: 0.5rem 1rem;
+    
 }
 
 .modal .modal-content .modal-header h2 {
     text-decoration: underline;
+    margin: 0;
+    padding: 0.5rem 1rem;
 }
 
 
 /*modal close close button*/
 .modal .modal-header .modal-close {
+    float: right;
     background-color: transparent;
     border: 5; /*replace with none after testing*/
     font-size: 40px;
-
-    margin-left: 450px; /*issue with this is it is hardcoded and doesnt change if resized*/
-    padding-right: 10px; 
+    
+     /*issue with this is it is hardcoded and doesnt change if resized*/
+    
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -171,7 +175,7 @@ h1 {
 .modal .modal-content .modal-slideImg .slide_img{
     position: absolute;
     width: 100%;
-    height: 80%;
+    height: 88%;
     
 }
 
@@ -261,6 +265,21 @@ transition: .25s
 { background-color: #f44336;}
 
 
+#i1_:checked ~ #one_,
+#i2_:checked ~ #two_,
+#i3_:checked ~ #three_,
+#i4_:checked ~ #four_,
+#i5_:checked ~ #five_
+{z-index: 9;}
+
+#i1_:checked  ~  #nav_slide #dot1_,
+#i2_:checked  ~  #nav_slide #dot2_,
+#i3_:checked  ~  #nav_slide #dot3_,
+#i4_:checked  ~  #nav_slide #dot4_,
+#i5_:checked  ~  #nav_slide #dot5_
+{ background-color: #f44336;}
+
+
 
 @keyframes scroll{
     0%{	opacity:.4;}
@@ -319,7 +338,11 @@ could optimise this to have only 1 for each icon (not duplicated)
 .modal .modal-content .modal-footer a .fas{
     color: black;
     position: absolute; 
-    right: 60px;
+    /*further over :s need to sort as it wont work for other pages*/
+    /*further over :s need to sort as it wont work for other pages*/
+    right: 60px; /*further over :s need to sort as it wont work for other pages*/
+    /*further over :s need to sort as it wont work for other pages*/
+    /*further over :s need to sort as it wont work for other pages*/
     bottom: 15px;
     font-size: 30px; /*this dictates the size of the icon*/
 }
