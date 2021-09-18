@@ -111,7 +111,8 @@ h1 {
 
 .modal {
 
-    width: 60%;
+    /* maybe play around with minsize/maxsize to make this better reactive*/
+    width: 40%;
     height: 60%;
     
     position: fixed;
@@ -150,6 +151,17 @@ h1 {
 
 .modal .modal-content .modal-header h2 {
     text-decoration: underline;
+}
+
+
+/*modal close close button*/
+.modal .modal-header .modal-close {
+    background-color: transparent;
+    border: 5; /*replace with none after testing*/
+    font-size: 40px;
+
+    margin-left: 450px; /*issue with this is it is hardcoded and doesnt change if resized*/
+    padding-right: 10px; 
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -203,7 +215,7 @@ label span{
 
 .modal-slideImg #nav_slide{
 width: 100%;
-bottom: 12%;
+bottom: 20%;
 height: 11px;
 position: absolute;
 text-align: center;
@@ -213,10 +225,10 @@ cursor: default;
 }
 
 #nav_slide .dots{
-top: -5px;
+
 width: 18px;
 height: 18px;
-margin: 0 4px;
+margin: 0 5px;
 position: relative;
 border-radius: 100%;
 display: inline-block;
@@ -234,14 +246,18 @@ transition: .25s
     z-index: -1;
 }
 
-#i1:checked ~ #one  ,
-#i2:checked ~ #two  ,
-#i3:checked ~ #three
-{z-index: 9; animation: scroll 1s ease-in-out;}
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three,
+#i4:checked ~ #four,
+#i5:checked ~ #five
+{z-index: 9;}
 
 #i1:checked  ~  #nav_slide #dot1,
 #i2:checked  ~  #nav_slide #dot2,
-#i3:checked  ~  #nav_slide #dot3
+#i3:checked  ~  #nav_slide #dot3,
+#i4:checked  ~  #nav_slide #dot4,
+#i5:checked  ~  #nav_slide #dot5
 { background-color: #f44336;}
 
 
@@ -278,26 +294,6 @@ transition: .25s
 /* -------------------------------------------------------------------------------- */
 /*                                     imagescroller end                            */
 /* -------------------------------------------------------------------------------- */
-
-
-
-/*image for top of modal*/
-.modal .modal-content img {
-    height: 100px;
-    width: 100px;
-    padding: 30px;
-    
-}
-
-
-/*modal close close button*/
-.modal .modal-header .modal-close {
-    background-color: transparent;
-    border: none;
-    font-size: 40px;
-    padding-left: 40%;
-}
-
 
 
 .modal .modal-content .modal-footer{
