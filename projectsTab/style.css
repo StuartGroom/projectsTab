@@ -112,8 +112,8 @@ h1 {
 .modal {
 
     /* maybe play around with minsize/maxsize to make this better reactive*/
-    width: 40%;
-    height: 60%;
+    width: 60%;
+    height: 80%;
     
     position: fixed;
     top: 50%;
@@ -161,12 +161,21 @@ h1 {
 .modal .modal-header .modal-close {
     float: right;
     background-color: transparent;
-    border: 5; /*replace with none after testing*/
+    border: none;
     font-size: 40px;
-    
      /*issue with this is it is hardcoded and doesnt change if resized*/
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.modal .modal-header .modal-close:hover {
+    background-color: #f44336;
+    color: white;
     
 }
+
+
 
 /* -------------------------------------------------------------------------------- */
 /*                              image scroller                                      */
@@ -193,22 +202,27 @@ input[type="radio"] { display: none; }  /* hides the inbuilt radio buttons (img 
     height: inherit;
     position: absolute;
     top:0; 
-    background-color: rgba(88, 88, 88,.2);
-    color:rgba(244, 244, 244,.9);
+    background-color: rgba(209, 209, 209, 0.2);
+    color:rgba(244, 244, 244,0);
     z-index: 99;
     transition: .45s;
     cursor: pointer;
     text-align: center;
 }
 
-.next{right:0;}
-.prev{left:0;}
+.next{
+    right:0;
+}
+.prev{
+    left:0;
+}
 
 label span{
     position: absolute;
     font-size: 100pt;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 35%;
+    transform: translate(-50%);
+    
 }
 
 .prev:hover, .next:hover{
@@ -236,7 +250,7 @@ margin: 0 5px;
 position: relative;
 border-radius: 100%;
 display: inline-block;
-background-color: rgba(180, 178, 178, 0.9);
+background-color: rgba(180, 178, 178, 0.8);
 transition: .4s;
 }
 
@@ -280,11 +294,6 @@ transition: .25s
 { background-color: #f44336;}
 
 
-
-@keyframes scroll{
-    0%{	opacity:.4;}
-    100%{opacity:1;}
-}		
 
 @media screen and (max-width: 685px){  /* scales size of sidescroller bars */ 
     .modal-slideImg{
